@@ -27,8 +27,9 @@ with other competitors.
 
 ## Puzzles
 
+<!-- On-hand emojis: ✔ 🌟 -->
 | Day  | Part One | Part Two | Solutions
-|---|:---:|:---:|:---:| <!-- ✔ 🌟 -->
+|---|:---:|:---:|:---:|
 |   [Day 1: TBD](https://adventofcode.com/2021/day/1)|    |    |[Solution](day1.rb)
 |   [Day 2: TBD](https://adventofcode.com/2021/day/2)|    |    |[Solution](day2.rb)
 |   [Day 3: TBD](https://adventofcode.com/2021/day/3)|    |    |[Solution](day3.rb)
