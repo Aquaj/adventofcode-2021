@@ -12,10 +12,13 @@ Each year, starting on Dec 1st, an advent calendar of small programming puzzles 
 
 ## Advent of Code 2021 Story
 
-**TODO: Fill in when available**
+You're minding your own business on a ship at sea when the overboard alarm goes off! You rush to see if you can help. Apparently, one of the Elves tripped and accidentally sent the sleigh keys flying into the ocean!
 
-Collect stars by solving puzzles. Two puzzles will be made available on each day in the Advent calendar; the second
-puzzle is unlocked when you complete the first. Each puzzle grants one star. Good luck!
+Before you know it, you're inside a submarine the Elves keep ready for situations like this. It's covered in Christmas lights (because of course it is), and it even has an experimental antenna that should be able to track the keys if you can boost its signal strength high enough; there's a little meter that indicates the antenna's signal strength by displaying 0-50 stars.
+
+Your instincts tell you that in order to save Christmas, you'll need to get all fifty stars by December 25th.
+
+Collect stars by solving puzzles. Two puzzles will be made available on each day in the Advent calendar; the second puzzle is unlocked when you complete the first. Each puzzle grants one star. Good luck!
 
 ## Context
 
@@ -28,33 +31,33 @@ with other competitors.
 ## Puzzles
 
 <!-- On-hand emojis: ✔ 🌟 -->
-| Day  | Part One | Part Two | Solutions
-|---|:---:|:---:|:---:|
-|   [Day 1: TBD](https://adventofcode.com/2021/day/1)|    |    |[Solution](day-01.rb)
-|   [Day 2: TBD](https://adventofcode.com/2021/day/2)|    |    |[Solution](day-02.rb)
-|   [Day 3: TBD](https://adventofcode.com/2021/day/3)|    |    |[Solution](day-03.rb)
-|   [Day 4: TBD](https://adventofcode.com/2021/day/4)|    |    |[Solution](day-04.rb)
-|   [Day 5: TBD](https://adventofcode.com/2021/day/5)|    |    |[Solution](day-05.rb)
-|   [Day 6: TBD](https://adventofcode.com/2021/day/6)|    |    |[Solution](day-06.rb)
-|   [Day 7: TBD](https://adventofcode.com/2021/day/7)|    |    |[Solution](day-07.rb)
-|   [Day 8: TBD](https://adventofcode.com/2021/day/8)|    |    |[Solution](day-08.rb)
-|   [Day 9: TBD](https://adventofcode.com/2021/day/9)|    |    |[Solution](day-09.rb)
-|   [Day 10: TBD](https://adventofcode.com/2021/day/10)|    |    |[Solution](day-10.rb)
-|   [Day 11: TBD](https://adventofcode.com/2021/day/11)|    |    |[Solution](day-11.rb)
-|   [Day 12: TBD](https://adventofcode.com/2021/day/12)|    |    |[Solution](day-12.rb)
-|   [Day 13: TBD](https://adventofcode.com/2021/day/13)|    |    |[Solution](day-13.rb)
-|   [Day 14: TBD](https://adventofcode.com/2021/day/14)|    |    |[Solution](day-14.rb)
-|   [Day 15: TBD](https://adventofcode.com/2021/day/15)|    |    |[Solution](day-15.rb)
-|   [Day 16: TBD](https://adventofcode.com/2021/day/16)|    |    |[Solution](day-16.rb)
-|   [Day 17: TBD](https://adventofcode.com/2021/day/17)|    |    |[Solution](day-17.rb)
-|   [Day 18: TBD](https://adventofcode.com/2021/day/18)|    |    |[Solution](day-18.rb)
-|   [Day 19: TBD](https://adventofcode.com/2021/day/19)|    |    |[Solution](day-19.rb)
-|   [Day 20: TBD](https://adventofcode.com/2021/day/20)|    |    |[Solution](day-20.rb)
-|   [Day 21: TBD](https://adventofcode.com/2021/day/21)|    |    |[Solution](day-21.rb)
-|   [Day 22: TBD](https://adventofcode.com/2021/day/22)|    |    |[Solution](day-22.rb)
-|   [Day 23: TBD](https://adventofcode.com/2021/day/23)|    |    |[Solution](day-23.rb)
-|   [Day 24: TBD](https://adventofcode.com/2021/day/24)|    |    |[Solution](day-24.rb)
-|   [Day 25: TBD](https://adventofcode.com/2021/day/25)|    |    |[Solution](day-25.rb)
+|| Day  | Part One | Part Two | Solutions
+|:---:|---|:---:|:---:|:---:|
+| ✔ |[Day 1: Sonar Sweep](https://adventofcode.com/2021/day/1)|  🌟  |  🌟  |[Solution](day-01.rb)
+| ✔ |[Day 2: Dive!](https://adventofcode.com/2021/day/2)|  🌟  |  🌟  |[Solution](day-02.rb)
+|   |[Day 3: TBD](https://adventofcode.com/2021/day/3)|     |     |[Solution](day-03.rb)
+|   |[Day 4: TBD](https://adventofcode.com/2021/day/4)|     |     |[Solution](day-04.rb)
+|   |[Day 5: TBD](https://adventofcode.com/2021/day/5)|     |     |[Solution](day-05.rb)
+|   |[Day 6: TBD](https://adventofcode.com/2021/day/6)|     |     |[Solution](day-06.rb)
+|   |[Day 7: TBD](https://adventofcode.com/2021/day/7)|     |     |[Solution](day-07.rb)
+|   |[Day 8: TBD](https://adventofcode.com/2021/day/8)|     |     |[Solution](day-08.rb)
+|   |[Day 9: TBD](https://adventofcode.com/2021/day/9)|     |     |[Solution](day-09.rb)
+|   |[Day 10: TBD](https://adventofcode.com/2021/day/10)|     |     |[Solution](day-10.rb)
+|   |[Day 11: TBD](https://adventofcode.com/2021/day/11)|     |     |[Solution](day-11.rb)
+|   |[Day 12: TBD](https://adventofcode.com/2021/day/12)|     |     |[Solution](day-12.rb)
+|   |[Day 13: TBD](https://adventofcode.com/2021/day/13)|     |     |[Solution](day-13.rb)
+|   |[Day 14: TBD](https://adventofcode.com/2021/day/14)|     |     |[Solution](day-14.rb)
+|   |[Day 15: TBD](https://adventofcode.com/2021/day/15)|     |     |[Solution](day-15.rb)
+|   |[Day 16: TBD](https://adventofcode.com/2021/day/16)|     |     |[Solution](day-16.rb)
+|   |[Day 17: TBD](https://adventofcode.com/2021/day/17)|     |     |[Solution](day-17.rb)
+|   |[Day 18: TBD](https://adventofcode.com/2021/day/18)|     |     |[Solution](day-18.rb)
+|   |[Day 19: TBD](https://adventofcode.com/2021/day/19)|     |     |[Solution](day-19.rb)
+|   |[Day 20: TBD](https://adventofcode.com/2021/day/20)|     |     |[Solution](day-20.rb)
+|   |[Day 21: TBD](https://adventofcode.com/2021/day/21)|     |     |[Solution](day-21.rb)
+|   |[Day 22: TBD](https://adventofcode.com/2021/day/22)|     |     |[Solution](day-22.rb)
+|   |[Day 23: TBD](https://adventofcode.com/2021/day/23)|     |     |[Solution](day-23.rb)
+|   |[Day 24: TBD](https://adventofcode.com/2021/day/24)|     |     |[Solution](day-24.rb)
+|   |[Day 25: TBD](https://adventofcode.com/2021/day/25)|     |     |[Solution](day-25.rb)
 
 ## Running the code
 
