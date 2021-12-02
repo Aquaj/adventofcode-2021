@@ -7,7 +7,8 @@ require 'benchmark'
 require 'net/http'
 
 class AdventDay
-  SESSION = ENV['SESSION'] || ''
+  SESSION = ENV['SESSION']
+  YEAR = ENV['YEAR']
 
   def self.solve
     puts " - #{(Benchmark.measure { print self.new.first_part.inspect  }.real * 1000).round(3)}ms"
@@ -35,11 +36,13 @@ class AdventDay
   INPUT_PATH_SCHEME = '/%{year}/day/%{number}/input'.freeze
 
   def download_input
+    raise "Cannot download input without a session cookie" unless SESSION
     res = Faraday.get(
-      INPUT_BASE_URL + INPUT_PATH_SCHEME % { year: 2021, number: day_number },
+      INPUT_BASE_URL + INPUT_PATH_SCHEME % { year: YEAR, number: day_number },
       nil,
       { 'Cookie' => "session=#{SESSION}" },
     )
+    raise "Input doesn't appear to be accessible (yet?)" if res.status == 404
     File.write('inputs/'+day_number, res.body)
     res.body
   end
