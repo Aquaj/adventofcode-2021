@@ -35,7 +35,7 @@ with other competitors.
 |:---:|---|:---:|:---:|:---:|
 | ✔ |[Day 1: Sonar Sweep](https://adventofcode.com/2021/day/1)|  🌟  |  🌟  |[Solution](day-01.rb)
 | ✔ |[Day 2: Dive!](https://adventofcode.com/2021/day/2)|  🌟  |  🌟  |[Solution](day-02.rb)
-|   |[Day 3: TBD](https://adventofcode.com/2021/day/3)|     |     |[Solution](day-03.rb)
+| ✔ |[Day 3: Binary Diagnostic](https://adventofcode.com/2021/day/3)|  🌟  |  🌟  |[Solution](day-03.rb)
 |   |[Day 4: TBD](https://adventofcode.com/2021/day/4)|     |     |[Solution](day-04.rb)
 |   |[Day 5: TBD](https://adventofcode.com/2021/day/5)|     |     |[Solution](day-05.rb)
 |   |[Day 6: TBD](https://adventofcode.com/2021/day/6)|     |     |[Solution](day-06.rb)
