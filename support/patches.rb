@@ -29,6 +29,14 @@ module Patches
   end
   Enumerable.include Product
 
+  module Towards
+    def towards(num)
+      return self.downto(num) if self > num
+      self.upto(num)
+    end
+  end
+  Numeric.include Towards
+
   module ConvenientAccess
     def first
       chars.first
