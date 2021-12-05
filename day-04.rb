@@ -1,6 +1,8 @@
 require_relative 'common'
 
 class Day4 < AdventDay
+  EXPECTED_RESULTS = { 1 => 4512, 2 => 1924 }
+
   class Board
     def initialize(board)
       @board = board

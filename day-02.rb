@@ -1,6 +1,8 @@
 require_relative 'common'
 
 class Day2 < AdventDay
+  EXPECTED_RESULTS = { 1 => 150, 2 => 900 }
+
   def first_part
     input.reduce({x:0, d:0}) do |coords, (instruction, n)|
       case instruction

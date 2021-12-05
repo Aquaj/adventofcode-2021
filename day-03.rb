@@ -1,6 +1,8 @@
 require_relative 'common'
 
 class Day3 < AdventDay
+  EXPECTED_RESULTS = { 1 => 198, 2 => 230 }
+
   def first_part
     bits_per_col = input.transpose
     gamma = bits_per_col.map { |col| most_common_in(col) }.join.to_i(2)

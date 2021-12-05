@@ -1,6 +1,8 @@
 require_relative 'common'
 
 class Day1 < AdventDay
+  EXPECTED_RESULTS = { 1 => 7, 2 => 5 }
+
   def first_part
     input.each_cons(2).count { |a,b| b > a }
   end
