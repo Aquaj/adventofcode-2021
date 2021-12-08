@@ -33,14 +33,14 @@ with other competitors.
 <!-- On-hand emojis: ✔ 🌟 -->
 |       | Day                                                                   | Part One | Part Two | Solutions
 | :---: | -----                                                                 | :------: | :------: | :---:
-| ✔     | [Day 0: Sonar Sweep](https://adventofcode.com/2021/day/1)             |    🌟    |    🌟    | [Solution](day-01.rb)
-| ✔     | [Day 2: Dive!](https://adventofcode.com/2021/day/2)                   |    🌟    |    🌟    | [Solution](day-02.rb)
-| ✔     | [Day 3: Binary Diagnostic](https://adventofcode.com/2021/day/3)       |    🌟    |    🌟    | [Solution](day-03.rb)
-| ✔     | [Day 4: Giant Squid](https://adventofcode.com/2021/day/4)             |    🌟    |    🌟    | [Solution](day-04.rb)
-| ✔     | [Day 5: Hydrotherman Venture](https://adventofcode.com/2021/day/5)    |    🌟    |    🌟    | [Solution](day-05.rb)
-| ✔     | [Day 6: Lanternfish](https://adventofcode.com/2021/day/6)             |    🌟    |    🌟    | [Solution](day-06.rb)
-| ✔     | [Day 7: The Treachery of Whales](https://adventofcode.com/2021/day/7) |    🌟    |    🌟    | [Solution](day-07.rb)
-|       | [Day 8: TBD](https://adventofcode.com/2021/day/8)                     |          |          | [Solution](day-08.rb)
+|   ✔   | [Day 0: Sonar Sweep](https://adventofcode.com/2021/day/1)             |    🌟    |    🌟    | [Solution](day-01.rb)
+|   ✔   | [Day 2: Dive!](https://adventofcode.com/2021/day/2)                   |    🌟    |    🌟    | [Solution](day-02.rb)
+|   ✔   | [Day 3: Binary Diagnostic](https://adventofcode.com/2021/day/3)       |    🌟    |    🌟    | [Solution](day-03.rb)
+|   ✔   | [Day 4: Giant Squid](https://adventofcode.com/2021/day/4)             |    🌟    |    🌟    | [Solution](day-04.rb)
+|   ✔   | [Day 5: Hydrotherman Venture](https://adventofcode.com/2021/day/5)    |    🌟    |    🌟    | [Solution](day-05.rb)
+|   ✔   | [Day 6: Lanternfish](https://adventofcode.com/2021/day/6)             |    🌟    |    🌟    | [Solution](day-06.rb)
+|   ✔   | [Day 7: The Treachery of Whales](https://adventofcode.com/2021/day/7) |    🌟    |    🌟    | [Solution](day-07.rb)
+|   ✔   | [Day 8: Seven Segment Search](https://adventofcode.com/2021/day/8)    |          |          | [Solution](day-08.rb)
 |       | [Day 9: TBD](https://adventofcode.com/2021/day/9)                     |          |          | [Solution](day-09.rb)
 |       | [Day 10: TBD](https://adventofcode.com/2021/day/10)                   |          |          | [Solution](day-10.rb)
 |       | [Day 11: TBD](https://adventofcode.com/2021/day/11)                   |          |          | [Solution](day-11.rb)
