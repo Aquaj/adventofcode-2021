@@ -95,4 +95,12 @@ module Patches
   end
   Set.include Unwrap
   Array.include Unwrap
+
+  module ReverseHash
+    def reverse
+      self.map(&:reverse).to_h
+    end
+  end
+  Hash.include ReverseHash
+
 end
