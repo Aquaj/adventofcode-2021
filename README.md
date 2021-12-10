@@ -42,7 +42,7 @@ with other competitors.
 |   ✔   | [Day 7: The Treachery of Whales](https://adventofcode.com/2021/day/7) |    🌟    |    🌟    | [Solution](day-07.rb)
 |   ✔   | [Day 8: Seven Segment Search](https://adventofcode.com/2021/day/8)    |    🌟    |    🌟    | [Solution](day-08.rb)
 |   ✔   | [Day 9: Smoke Basin](https://adventofcode.com/2021/day/9)             |    🌟    |    🌟    | [Solution](day-09.rb)
-|       | [Day 10: TBD](https://adventofcode.com/2021/day/10)                   |          |          | [Solution](day-10.rb)
+|   ✔   | [Day 10: Syntax Scoring](https://adventofcode.com/2021/day/10)        |    🌟    |    🌟    | [Solution](day-10.rb)
 |       | [Day 11: TBD](https://adventofcode.com/2021/day/11)                   |          |          | [Solution](day-11.rb)
 |       | [Day 12: TBD](https://adventofcode.com/2021/day/12)                   |          |          | [Solution](day-12.rb)
 |       | [Day 13: TBD](https://adventofcode.com/2021/day/13)                   |          |          | [Solution](day-13.rb)
