@@ -44,7 +44,7 @@ with other competitors.
 |   ✔   | [Day 9: Smoke Basin](https://adventofcode.com/2021/day/9)             |    🌟    |    🌟    | [Solution](day-09.rb)
 |   ✔   | [Day 10: Syntax Scoring](https://adventofcode.com/2021/day/10)        |    🌟    |    🌟    | [Solution](day-10.rb)
 |   ✔   | [Day 11: Dumbo Octopus](https://adventofcode.com/2021/day/11)         |    🌟    |    🌟    | [Solution](day-11.rb)
-|       | [Day 12: TBD](https://adventofcode.com/2021/day/12)                   |          |          | [Solution](day-12.rb)
+|   ✔   | [Day 12: Passage Pathing](https://adventofcode.com/2021/day/12)       |    🌟    |    🌟    | [Solution](day-12.rb)
 |       | [Day 13: TBD](https://adventofcode.com/2021/day/13)                   |          |          | [Solution](day-13.rb)
 |       | [Day 14: TBD](https://adventofcode.com/2021/day/14)                   |          |          | [Solution](day-14.rb)
 |       | [Day 15: TBD](https://adventofcode.com/2021/day/15)                   |          |          | [Solution](day-15.rb)
