@@ -1,7 +1,5 @@
 require_relative 'common'
 
-require 'delegate'
-
 class Day12 < AdventDay
   EXPECTED_RESULTS = { 1=> 10, 2 => 36 }.freeze
 
