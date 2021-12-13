@@ -25,8 +25,9 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 **Done during [Le Wagon x AoC challenge](http://lewagon-aoc.herokuapp.com/)**
 
 **These were not written as example of clean or efficient code** but are simply my attempts at finding the answers to
-each day's puzzle as quickly as possible. Performance logging was added simply as a fun way to compare implementations
-with other competitors.
+each day's puzzle as quickly as possible, with a minimal refactoring at the end of the exercise to improve readability.
+
+Performance logging was added simply as a fun way to compare implementations with other competitors.
 
 ## Puzzles
 
@@ -45,7 +46,7 @@ with other competitors.
 |   ✔   | [Day 10: Syntax Scoring](https://adventofcode.com/2021/day/10)        |    🌟    |    🌟    | [Solution](day-10.rb)
 |   ✔   | [Day 11: Dumbo Octopus](https://adventofcode.com/2021/day/11)         |    🌟    |    🌟    | [Solution](day-11.rb)
 |   ✔   | [Day 12: Passage Pathing](https://adventofcode.com/2021/day/12)       |    🌟    |    🌟    | [Solution](day-12.rb)
-|       | [Day 13: TBD](https://adventofcode.com/2021/day/13)                   |          |          | [Solution](day-13.rb)
+|   ✔   | [Day 13: Transparent Origami](https://adventofcode.com/2021/day/13)   |    🌟    |    🌟    | [Solution](day-13.rb)
 |       | [Day 14: TBD](https://adventofcode.com/2021/day/14)                   |          |          | [Solution](day-14.rb)
 |       | [Day 15: TBD](https://adventofcode.com/2021/day/15)                   |          |          | [Solution](day-15.rb)
 |       | [Day 16: TBD](https://adventofcode.com/2021/day/16)                   |          |          | [Solution](day-16.rb)
