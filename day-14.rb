@@ -15,33 +15,24 @@ class Day14 < AdventDay
     new_polymer.tally.then { |pol| pol.values.max - pol.values.min }
   end
 
+  # Full list/string construction will kill us, performance-wise, so we switch approach
   def second_part
-    # Full list/string construction will kill us, performance-wise
-    pair_counts = 40.times.reduce(input[:base].each_cons(2).tally.with_default(0)) do |counts, _|
+    pair_counts = input[:base].each_cons(2).tally.with_default(0)
+    letter_counts = input[:base].tally.with_default(0)
+
+    pair_counts = 40.times.reduce(pair_counts) do |counts, _|
       input[:transformations].each_with_object({}.with_default(0)) do |((a,b), to_insert), new_counts|
         pair_count = counts[[a,b]]
         new_counts[[a, to_insert]] += pair_count
         new_counts[[to_insert, b]] += pair_count
+        letter_counts[to_insert] += pair_count
       end
     end
 
-    letter_counts = pair_counts_to_letters_count(pair_counts)
     letter_counts.values.max - letter_counts.values.min
   end
 
   private
-
-  def pair_counts_to_letters_count(pair_counts)
-    # To avoid counting each letter twice we only take the first letter into account
-    letter_counts = pair_counts.each_with_object({}.with_default(0)) do |((a,_b), count), counts|
-      counts[a] += count
-    end
-    # And then we add the missing last letter on the last pair
-    *,last = *input[:base]
-    letter_counts[last] += 1
-
-    letter_counts
-  end
 
   def convert_data(data)
     base,transformations=data.split("\n\n")
