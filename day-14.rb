@@ -17,13 +17,9 @@ class Day14 < AdventDay
 
   def second_part
     # Full list/string construction will kill us, performance-wise
-    pair_counts = 40.times.reduce(input[:base].each_cons(2).tally) do |counts, _|
-      input[:transformations].each_with_object({}) do |((a,b), to_insert), new_counts|
+    pair_counts = 40.times.reduce(input[:base].each_cons(2).tally.with_default(0)) do |counts, _|
+      input[:transformations].each_with_object({}.with_default(0)) do |((a,b), to_insert), new_counts|
         pair_count = counts[[a,b]]
-        next unless pair_count&.nonzero?
-
-        new_counts[[a, to_insert]] ||= 0
-        new_counts[[to_insert, b]] ||= 0
         new_counts[[a, to_insert]] += pair_count
         new_counts[[to_insert, b]] += pair_count
       end
@@ -37,13 +33,11 @@ class Day14 < AdventDay
 
   def pair_counts_to_letters_count(pair_counts)
     # To avoid counting each letter twice we only take the first letter into account
-    letter_counts = pair_counts.each_with_object({}) do |((a,_b), count), counts|
-      counts[a] ||= 0
+    letter_counts = pair_counts.each_with_object({}.with_default(0)) do |((a,_b), count), counts|
       counts[a] += count
     end
     # And then we add the missing last letter on the last pair
     *,last = *input[:base]
-    letter_counts[last] ||= 0
     letter_counts[last] += 1
 
     letter_counts
