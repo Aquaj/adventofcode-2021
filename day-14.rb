@@ -21,8 +21,8 @@ class Day14 < AdventDay
     letter_counts = input[:base].tally.with_default(0)
 
     pair_counts = 40.times.reduce(pair_counts) do |counts, _|
-      input[:transformations].each_with_object({}.with_default(0)) do |((a,b), to_insert), new_counts|
-        pair_count = counts[[a,b]]
+      counts.each_with_object({}.with_default(0)) do |((a,b), pair_count), new_counts|
+        to_insert = input[:transformations][[a,b]]
 
         letter_counts[to_insert]   += pair_count
         new_counts[[a, to_insert]] += pair_count
