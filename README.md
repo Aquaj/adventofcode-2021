@@ -1,9 +1,9 @@
-# advent-of-code-2021 [![Examples](../../actions/workflows/examples.yml/badge.svg)](../../actions/workflows/examples.yml)
+# advent-of-code-2021 [![Examples](../../actions/workflows/examples.yml/badge.svg)](../../actions/workflows/examples.yml) [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
 Advent of Code 2021 🎄 Ruby Solutions by `@Aquaj`
 
 README based on [Adrienne Tacke's AoC solutions repository](https://github.com/adriennetacke/advent-of-code-2020).
 
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## What is Advent of Code?
 [Advent of Code](http://adventofcode.com) is an online event created by [Eric Wastl](https://twitter.com/ericwastl).
