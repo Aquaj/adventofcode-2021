@@ -1,5 +1,5 @@
 # advent-of-code-2021
-Advent of Code 2021 🎄 Ruby Solutions by `@Aquaj` [![Examples](/actions/workflows/tests.yml/badge.svg?branch=chore/github-build)](/actions/workflows/tests.yml?branch=chore/github-build)
+Advent of Code 2021 🎄 Ruby Solutions by `@Aquaj` [![Examples](../../actions/workflows/tests.yml/badge.svg?branch=chore/github-build)](../../actions/workflows/tests.yml?branch=chore/github-build)
 
 README based on [Adrienne Tacke's AoC solutions repository](https://github.com/adriennetacke/advent-of-code-2020).
 
