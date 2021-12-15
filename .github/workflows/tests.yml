@@ -1,4 +1,4 @@
-name: Tests
+name: Examples
 on: [push]
 jobs:
   Explore-GitHub-Actions:
@@ -10,7 +10,7 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
-      - name: Run tests
+      - name: Run examples
         run: |
           for file in $(ls day*.rb)
           do
