@@ -11,4 +11,9 @@ jobs:
         with:
           bundler-cache: true
       - name: Run tests
-        run: foreach file in day*.rb; do echo $file; ruby $file --debug || exit 1; done; exit 0
+        run: |
+          foreach file in day*.rb; do
+            echo $file
+            ruby $file --debug || exit 1
+          done
+          exit 0
