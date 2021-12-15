@@ -48,7 +48,7 @@ Performance logging was added simply as a fun way to compare implementations wit
 |   ✔   | [Day 12: Passage Pathing](https://adventofcode.com/2021/day/12)         |    🌟    |    🌟    | [Solution](day-12.rb)
 |   ✔   | [Day 13: Transparent Origami](https://adventofcode.com/2021/day/13)     |    🌟    |    🌟    | [Solution](day-13.rb)
 |   ✔   | [Day 14: Extended Polymerization](https://adventofcode.com/2021/day/14) |    🌟    |    🌟    | [Solution](day-14.rb)
-|       | [Day 15: TBD](https://adventofcode.com/2021/day/15)                     |          |          | [Solution](day-15.rb)
+|   ✔   | [Day 15: Chiton](https://adventofcode.com/2021/day/15)                  |    🌟    |    🌟    | [Solution](day-15.rb)
 |       | [Day 16: TBD](https://adventofcode.com/2021/day/16)                     |          |          | [Solution](day-16.rb)
 |       | [Day 17: TBD](https://adventofcode.com/2021/day/17)                     |          |          | [Solution](day-17.rb)
 |       | [Day 18: TBD](https://adventofcode.com/2021/day/18)                     |          |          | [Solution](day-18.rb)
