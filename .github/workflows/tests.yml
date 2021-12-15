@@ -12,7 +12,8 @@ jobs:
           bundler-cache: true
       - name: Run tests
         run: |
-          foreach file in day*.rb; do
+          for file in $(ls day*.rb)
+          do
             echo $file
             ruby $file --debug || exit 1
           done
