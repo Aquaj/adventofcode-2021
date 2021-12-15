@@ -46,6 +46,14 @@ class Grid < SimpleDelegator
     self[y][x] = value
   end
 
+  def concat_h(grid_or_array)
+    Grid.new self.to_a.concat_h(grid_or_array.to_a)
+  end
+
+  def concat_v(grid_or_array)
+    Grid.new self.to_a.concat_v(grid_or_array.to_a)
+  end
+
   def bfs_traverse(to_visit=nil, queue=[], discovered=[to_visit], &block)
     return discovered unless to_visit
 
