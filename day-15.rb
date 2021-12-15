@@ -5,11 +5,11 @@ class Day15 < AdventDay
   EXPECTED_RESULTS = { 1 => 40, 2 => 315 }.freeze
 
   def first_part
-    bellman_ford_solution input.to_graph
+    dijkstra_solution input.to_graph
   end
 
   def second_part
-    bellman_ford_solution larger_input.to_graph
+    dijkstra_solution larger_input.to_graph
   end
 
   private
