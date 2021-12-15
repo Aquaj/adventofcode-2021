@@ -22,7 +22,7 @@ module Algorithms
       break if (distance[u] == Float::INFINITY)
       break if goal && u == goal
 
-      graph.neighbors_of(*u).each do |vertex|
+      graph.neighbors(u).each do |vertex|
         next if visited.include? vertex
 
         alt = distance[u] + graph.edge_cost(u, vertex)
@@ -39,12 +39,8 @@ module Algorithms
   end
 
   def bellman_ford(source, graph)
-    distance = {}
-    previous = {}
-    graph.nodes.each do |n|
-      distance[n] = Float::INFINITY
-      previous[n] = nil
-    end
+    distance={}.with_default Float::INFINITY
+    previous={}.with_default nil
 
     distance[source] = 0
 
