@@ -5,17 +5,17 @@ class Day15 < AdventDay
   EXPECTED_RESULTS = { 1 => 40, 2 => 315 }.freeze
 
   def first_part
-    dijkstra_solution input.to_graph
+    bellman_ford_solution input.to_graph
   end
 
   def second_part
-    dijkstra_solution larger_input.to_graph
+    bellman_ford_solution larger_input.to_graph
   end
 
   private
 
   # Literally never better than dijkstra in our case
-  def bellman_solution(graph)
+  def bellman_ford_solution(graph)
     goal = goal(graph)
     solution = Algorithms::bellman_ford([0,0], graph)
     solution[:distances][goal]
