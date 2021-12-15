@@ -3,6 +3,8 @@ require_relative '../patches'
 
 # Wraps a 2D array
 class Grid < SimpleDelegator
+  attr_reader :width, :height
+
   def initialize(twod_array)
     super
     @height = twod_array.length
@@ -68,5 +70,25 @@ class Grid < SimpleDelegator
     end
 
     discovered
+  end
+
+  module GraphMethods
+    def nodes
+      @nodes ||= coords.to_a
+    end
+
+    def edges
+      @edges ||= coords.flat_map { |s| neighbors_of(*s).map { |t| [s, t] } }
+    end
+
+    def edge_cost(_source, target)
+      self[*target]
+    end
+  end
+
+  def to_graph
+    graph = Grid.new self.to_a
+    graph.extend(GraphMethods)
+    graph
   end
 end
