@@ -16,7 +16,7 @@ module Patches
       end
     end
   end
-  Enumerator.include Nth
+  Enumerable.include Nth
 
   module Product
     def product(enum)
