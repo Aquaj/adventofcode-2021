@@ -26,8 +26,7 @@ class Day20 < AdventDay
     new_grid = Grid.new(empty_grid)
     default = out_of_bounds.next
     new_grid.coords.each do |(x,y)|
-      neighbors = (new_grid.neighbors_of(x, y, diagonals: true, extended: true) + [[x,y]]).sort_by(&:reverse)
-      index = neighbors.map { |(nx,ny)| image[nx-1,ny-1] || default }.join.to_i(2)
+      index = image.square_on(x-1,y-1).flatten.map { |n| n || default }.join.to_i(2)
       new_val = input[:algorithm][index]
       new_grid[x, y] = new_val
     end

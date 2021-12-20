@@ -29,6 +29,14 @@ class Grid < SimpleDelegator
   end
   alias_method :neighbors, :neighbors_of
 
+  def square_on(x,y)
+    Grid.new([
+      [self[x-1, y-1], self[x, y-1], self[x+1, y-1]],
+      [self[x-1,   y], self[x,   y], self[x+1,   y]],
+      [self[x-1, y+1], self[x, y+1], self[x+1, y+1]],
+    ])
+  end
+
   def out_of_bounds?(x,y)
     x < 0 || x >= @width ||
       y < 0 || y >= @height
