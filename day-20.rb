@@ -17,7 +17,7 @@ class Day20 < AdventDay
 
   def out_of_bounds
     # Everything more than one step out-of-bounds is going to have 0 neighbors at first
-    # then switch to full neighbors
+    # then switch according to the same rule as others — but stay in sync
     @oob_enum ||= Enumerator.produce(0) { |n| input[:algorithm][([n]*9).join.to_i(2)] }
   end
 
