@@ -5,10 +5,12 @@ require_relative '../patches'
 class Grid < SimpleDelegator
   attr_reader :width, :height
 
-  def initialize(twod_array)
-    super
+  def initialize(twod_array, fast_access: false)
+    super(twod_array)
     @height = twod_array.length
     @width = twod_array.first.length
+    @fast_access = fast_access
+    build_access_cache if fast_access
   end
 
   def inspect
@@ -42,18 +44,38 @@ class Grid < SimpleDelegator
       y < 0 || y >= @height
   end
 
-  def [](*coords)
+  def [](*coords, cache: fast_access?)
     return super(coords.first) if coords.one?
+    return @access_cache[coords] if cache
     x,y = *coords
     return nil if out_of_bounds?(x,y)
-    self[y][x]
+    __getobj__[y][x]
   end
 
   def []=(*coords, value)
     return super(coords.unwrap, value) if coords.one?
     x,y = *coords
     raise ArgumentError, "#{coords.inspect} is not in grid" if out_of_bounds?(x,y)
-    self[y][x] = value
+    if fast_access?
+      @access_cache[[x,y]] = value
+    else
+      __getobj__[y][x] = value
+    end
+  end
+
+  def fast_access?
+    @fast_access
+  end
+
+  def build_access_cache
+    @access_cache ||= coords.map { |(x,y)| [[x,y], self[x,y, cache: false]] }.to_h
+  end
+
+  def apply_cache
+    @access_cache.each do |(x,y), value|
+      __getobj__[y][x] = value
+    end
+    self
   end
 
   def concat_h(grid_or_array)
