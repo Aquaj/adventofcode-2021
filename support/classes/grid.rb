@@ -21,10 +21,11 @@ class Grid < SimpleDelegator
     (0...@width).product(0...@height)
   end
 
-  def neighbors_of(*coords, diagonals: false)
+  def neighbors_of(*coords, diagonals: false, extended: false)
     offsets = [[1,0],[0,1],[-1,0],[0,-1]]
     offsets += [[1,1],[-1,1],[1,-1],[-1,-1]] if diagonals
-    offsets.map { |(x,y)| [coords.first+x, coords.last+y] }.reject { |(x,y)| out_of_bounds?(x,y) }
+    new_offsets = offsets.map { |(x,y)| [coords.first+x, coords.last+y] }
+    extended ? new_offsets : new_offsets.reject { |(x,y)| out_of_bounds?(x,y) }
   end
   alias_method :neighbors, :neighbors_of
 
