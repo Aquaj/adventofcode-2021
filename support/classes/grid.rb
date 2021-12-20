@@ -39,6 +39,14 @@ class Grid < SimpleDelegator
     ])
   end
 
+  def flatten
+    if fast_access?
+      @access_cache.values
+    else
+      __getobj__.flatten
+    end
+  end
+
   def out_of_bounds?(x,y)
     x < 0 || x >= @width ||
       y < 0 || y >= @height
