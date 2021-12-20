@@ -5,36 +5,10 @@ require 'matrix'
 class Day19 < AdventDay
   EXPECTED_RESULTS = { 1 => 79, 2 => 3621 }
 
+  CACHE = {} # Class-level cache since we have per-instance solving
+
   def first_part
-    display "Precomputing..."
-    precompute_orientations(input)
-    display "Precomputing done !"
-
-    l = input.combination(2).count
-    indices = (0...input.length).to_a
-    matching_pairs = indices.product(indices).map.with_index do |(base_index, beacon_vectors_index), i|
-      _, base = get_orientation(base_index).find { |orientation, _v| orientation == Matrix.identity(3) }
-      get_orientation(beacon_vectors_index).find do |(ref, orientation)|
-        in_common = base.keys & orientation.keys
-        next unless in_common.count >= (12*11/2) # V = ∑(0->n)
-        break [[[base_index, beacon_vectors_index], ref], in_common.map { |vector| [base[vector], orientation[vector]] }]
-      end
-    end.compact
-    matches = matching_pairs.map do |metadata, pairs|
-      [metadata, pairs.
-        flat_map { |(p1a,p1b),p2| [[p1a, [p2]], [p1b, [p2]]].to_h }.
-        reduce { |a,e| a.merge(e) { |k,v1,v2| v1 + v2 } }.
-        map { |s,possible_ts| [s, possible_ts.reduce(&:&).unwrap] }]
-    end
-    relative_positions = matches.flat_map do |((i0,i1),orientation),pairs|
-      relative_pos = pairs.map { |(p1,p2)| diff(p1, p2) }.uniq.unwrap
-
-      [
-        [[[i0, i1], orientation], relative_pos],
-      ]
-    end.to_h
-
-    absolute_positions = (0...input.length).map { |scanner| compute_absolute_position(0, scanner, relative_positions) }
+    absolute_positions = CACHE[input] ||= compute_absolute_positions
 
     absolute_beacons = input.map.with_index do |beacons, i|
       beacons.map { |beacon| add(orient(beacon, absolute_positions[i].first), absolute_positions[i].last) }
@@ -43,11 +17,16 @@ class Day19 < AdventDay
   end
 
   def second_part
-    display "Precomputing..."
-    precompute_orientations(input)
-    display "Precomputing done !"
+    absolute_positions = CACHE[input] ||= compute_absolute_positions
 
-    l = input.combination(2).count
+    absolute_positions.map(&:last).combination(2).map { |s1,s2| diff(s1,s2).map(&:abs).sum }.max
+  end
+
+  private
+
+  def compute_absolute_positions
+    precompute_orientations(input)
+
     indices = (0...input.length).to_a
     matching_pairs = indices.product(indices).map.with_index do |(base_index, beacon_vectors_index), i|
       _, base = get_orientation(base_index).find { |orientation, _v| orientation == Matrix.identity(3) }
@@ -71,11 +50,8 @@ class Day19 < AdventDay
       ]
     end.to_h
 
-    absolute_positions = (0...input.length).map { |scanner| compute_absolute_position(0, scanner, relative_positions) }
-    absolute_positions.map(&:last).combination(2).map { |s1,s2| diff(s1,s2).map(&:abs).sum }.max
+    (0...input.length).map { |scanner| compute_absolute_position(0, scanner, relative_positions) }
   end
-
-  private
 
   def compute_vector(beacon_1, beacon_2)
     diff(beacon_1, beacon_2)
