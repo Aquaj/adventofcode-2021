@@ -98,14 +98,9 @@ class Day22 < AdventDay
 
   def second_part
     grid = RangeGrid.new
-    input.each_with_index do |(status, x_min, x_max, y_min, y_max, z_min, z_max), i|
-      x_min = x_min.to_i
-      x_max = x_max.to_i + 1 #<
-      y_min = y_min.to_i
-      y_max = y_max.to_i + 1 #< Incrementing since we're not using inclusive ranges this time
-      z_min = z_min.to_i
-      z_max = z_max.to_i + 1 #<
-      grid.turn_cube(x_min,x_max, y_min,y_max, z_min,z_max, status: status)
+    input.each do |(status, x_min, x_max, y_min, y_max, z_min, z_max)|
+      # Incrementing maxes since we're not using inclusive ranges this time
+      grid.turn_cube(x_min,x_max+1, y_min,y_max+1, z_min,z_max+1, status: status)
     end
     grid.cubes.sum(&:volume)
   end
