@@ -65,7 +65,8 @@ class Day22 < AdventDay
         [cube.min_z, cube.max_z, new_cube.min_z, new_cube.max_z].sort.each_cons(2))
 
       cubes = grid.map { |((x1,x2),(y1,y2)),(z1,z2)| Cube.new x1,x2, y1,y2, z1,z2 }
-      cubes.reject(&:empty?).select do |subcube|
+      cubes.select do |subcube|
+        next if subcube.empty?
         compute_intersection(subcube, new_cube).empty? &&
           !(compute_intersection(subcube, cube).empty?)
       end
