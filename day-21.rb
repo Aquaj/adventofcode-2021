@@ -36,9 +36,9 @@ class Day21 < AdventDay
 
   def game(pos_1, pos_2, score_1, score_2, dice_value, turn)
     score_1 += (pos_1 = (pos_1 + dice_value - 1) % 10 + 1) if turn == 1
-    return [1, 0] if score_1 >= 1000
+    return [1, 0] if score_1 >= 21
     score_2 += (pos_2 = (pos_2 + dice_value - 1) % 10 + 1) if turn == 2
-    return [0, 1] if score_2 >= 1000
+    return [0, 1] if score_2 >= 21
     new_turn = turn % 2 + 1
 
     universe_wins_1 = universe_wins_2 = 0
