@@ -59,7 +59,7 @@ class Day23 < AdventDay
       possible_spots.reject! { |(x,y)| x != room && y > 0 }
 
       # Going to available room spot is always the best move
-      room_spots = possible_spots & [[room, 1], [room, 2]]
+      room_spots = possible_spots & [[room, 1], [room, 2], [room, 3], [room, 4]]
       possible_spots = [room_spots.max_by(&:last)] if room_spots.any?
 
       possible_spots
@@ -86,6 +86,7 @@ class Day23 < AdventDay
     include Containers
 
     EMPTY = nil
+    WALL = '#'
     ROOMS = {
       'A' => 2,
       'B' => 4,
@@ -145,7 +146,7 @@ class Day23 < AdventDay
       return [] if successful?
       @possible_moves ||= @amphipods.flat_map do |amphipod|
         room = room(amphipod)
-        occupants = [self[room, 1], self[room, 2]] - [EMPTY]
+        occupants = [self[room, 1], self[room, 2], self[room, 3], self[room, 4]] - [EMPTY, WALL]
         next [] if occupants.all? { |a| a.type == amphipod.type } && occupants.include?(amphipod)
         moves = amphipod.possible_moves.map { |move| [amphipod, move] }
       end
@@ -172,7 +173,7 @@ class Day23 < AdventDay
   private
 
   def convert_data(data)
-    hallway = Hallway.new Array.new(5) { Array.new(11, '#') }
+    hallway = Hallway.new Array.new(5) { Array.new(11, Hallway::WALL) }
     (0...11).each { |i| hallway[i,0] = Hallway::EMPTY }
     (0...3).each { |c| [2,4,6,8].each { |room| hallway[room, c] = Hallway::EMPTY } }
     if @unfolded
