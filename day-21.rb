@@ -26,7 +26,7 @@ class Day21 < AdventDay
 
   def second_part
     @cache = Hash.new
-    GC.disable # Slight perf boost sicne we're going to create a bunch of objects
+    GC.disable # Slight perf boost since we're going to create a bunch of objects
     scores = cached_game(input[0], input[1], 0, 0, 0, 0)
     GC.enable
     scores.max
