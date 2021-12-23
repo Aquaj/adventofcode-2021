@@ -56,7 +56,7 @@ Performance logging was added simply as a fun way to compare implementations wit
 |   ✔   | [Day 20: Trench Map](https://adventofcode.com/2021/day/20)              |    🌟    |    🌟    | [Solution](day-20.rb)
 |   ✔   | [Day 21: Dirac Dice](https://adventofcode.com/2021/day/21)              |    🌟    |    🌟    | [Solution](day-21.rb)
 |   ✔   | [Day 22: Reactor Reboot](https://adventofcode.com/2021/day/22)          |    🌟    |    🌟    | [Solution](day-22.rb)
-|       | [Day 23: TBD](https://adventofcode.com/2021/day/23)                     |          |          | [Solution](day-23.rb)
+|   ✔   | [Day 23: Amphipod](https://adventofcode.com/2021/day/23)                |    🌟    |    🌟    | [Solution](day-23.rb)
 |       | [Day 24: TBD](https://adventofcode.com/2021/day/24)                     |          |          | [Solution](day-24.rb)
 |       | [Day 25: TBD](https://adventofcode.com/2021/day/25)                     |          |          | [Solution](day-25.rb)
 

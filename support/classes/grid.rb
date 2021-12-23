@@ -5,6 +5,8 @@ require_relative '../patches'
 class Grid < SimpleDelegator
   attr_reader :width, :height
 
+  EMPTY = nil
+
   def initialize(twod_array, fast_access: false)
     super(twod_array)
     @height = twod_array.length
@@ -99,12 +101,16 @@ class Grid < SimpleDelegator
 
     yield self[*to_visit], to_visit if block_given?
 
-    neighbors_of(*to_visit).reject { |x, y| self[x,y].nil? || discovered.include?([x,y]) }.uniq.
-      each do |coord|
-        discovered << coord
-        queue << coord
+    neighbors_of(*to_visit).each do |neighbor|
+        next if !traversable?(*neighbor) || discovered.include?(neighbor)
+        discovered << neighbor
+        queue << neighbor
       end
     bfs_traverse(queue.shift, queue, discovered, &block)
+  end
+
+  def traversable?(*coord)
+    self[*coord] != EMPTY
   end
 
   def dfs_traverse(to_visit=[0,0], discovered=[], &block)
@@ -113,7 +119,7 @@ class Grid < SimpleDelegator
     yield self[*to_visit], to_visit if block_given?
 
     neighbors_of(*to_visit).each do |neighbor|
-      next if self[*neighbor].nil? || discovered.include?(neighbor)
+      next if !traversable?(*neighbor) || discovered.include?(neighbor)
       dfs_traverse(neighbor, discovered, &block)
     end
 
