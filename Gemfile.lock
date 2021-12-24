@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/taw/z3.git
+  revision: 74302129029aadcd7c493a3577a3af3427334667
+  ref: 74302129029aadcd7c493a3577a3af3427334667
+  specs:
+    z3 (0.0.20181229)
+      ffi (~> 1.9)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -34,6 +42,7 @@ DEPENDENCIES
   faraday
   rgl
   rltk
+  z3!
 
 BUNDLED WITH
    2.2.32
