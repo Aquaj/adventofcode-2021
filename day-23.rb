@@ -95,8 +95,8 @@ class Day23 < AdventDay
     }.freeze
 
     attr_reader :amphipods
-    def initialize(*args)
-      super(*args)
+    def initialize(*args, **kwargs)
+      super(*args, **kwargs)
       @amphipods = []
       @current_cost = 0
     end
@@ -121,7 +121,7 @@ class Day23 < AdventDay
           cost, amphipod, move = to_try.pop
           break if cost >= min_solution # Ordered so all following solutions will cost more than current best
 
-          hall = Hallway.new self.to_a.deep_copy
+          hall = self.deep_copy
           copies = self.amphipods.map { |a| [a, a.copy_to(hall)] }.to_h
 
           hall.move(copies[amphipod], move)
@@ -162,10 +162,12 @@ class Day23 < AdventDay
   end
 
   def first_part
+    Hallway::Cache.clear
     input.solve
   end
 
   def second_part
+    Hallway::Cache.clear
     @unfolded = true
     input.solve
   end

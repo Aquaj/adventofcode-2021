@@ -73,6 +73,11 @@ class Grid < SimpleDelegator
     end
   end
 
+  def access_cache=(cache)
+    @access_cache = cache
+  end
+  protected :access_cache=
+
   def fast_access?
     @fast_access
   end
@@ -86,6 +91,12 @@ class Grid < SimpleDelegator
       __getobj__[y][x] = value
     end
     self
+  end
+
+  def deep_copy
+    new_grid = self.class.new(__getobj__.deep_copy, fast_access: @fast_access)
+    new_grid.access_cache = @access_cache.deep_copy if fast_access?
+    new_grid
   end
 
   def concat_h(grid_or_array)
