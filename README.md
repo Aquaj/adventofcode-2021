@@ -58,7 +58,7 @@ Performance logging was added simply as a fun way to compare implementations wit
 |   ✔   | [Day 22: Reactor Reboot](https://adventofcode.com/2021/day/22)          |    🌟    |    🌟    | [Solution](day-22.rb)
 |   ✔   | [Day 23: Amphipod](https://adventofcode.com/2021/day/23)                |    🌟    |    🌟    | [Solution](day-23.rb)
 |   ✔   | [Day 24: Arithmetic Logic Unit](https://adventofcode.com/2021/day/24)   |    🌟    |    🌟    | [Solution](day-24.rb)
-|       | [Day 25: TBD](https://adventofcode.com/2021/day/25)                     |          |          | [Solution](day-25.rb)
+|   ✔   | [Day 25: Sea Cucumber](https://adventofcode.com/2021/day/25)            |    🌟    |    🌟    | [Solution](day-25.rb)
 
 ## Running the code
 
