@@ -78,6 +78,6 @@ class AdventDay
   end
 
   def day_number
-    @day_number ||= self.class.name.gsub('Day', '')
+    @day_number ||= self.class.name.split('::').last.gsub('Day', '')
   end
 end
