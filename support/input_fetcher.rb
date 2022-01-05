@@ -54,12 +54,12 @@ class InputFetcher
     raise "Can't run debug mode without debug input #{file_path}"
   end
 
-  def fetch(path)
-    raise "Cannot download without a session cookie" unless SESSION
+  def fetch(path, session_key: 'session')
+    raise "Cannot download without a session cookie" unless self.class::SESSION
     res = Faraday.get(
       path,
       nil,
-      { 'Cookie' => "session=#{SESSION}" },
+      { 'Cookie' => "#{session_key}=#{self.class::SESSION}" },
     )
     raise "Page doesn't appear to be accessible (yet?)" if res.status == 404
     res
