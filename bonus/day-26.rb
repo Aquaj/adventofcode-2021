@@ -65,7 +65,7 @@ module Bonus
         caesar_key = cipher.prime_division.map { |(factor, power)| factor * power }.sum
         caesar_key += 5 if cipher.prime?
 
-        "#{name(sender)}: #{decode(unshifted, caesar_key)}"
+        "#{name(sender)}: #{decode(unshifted, caesar_key)}\n\n"
       end
       display decoded
     end
