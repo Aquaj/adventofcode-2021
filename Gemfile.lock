@@ -20,7 +20,12 @@ GEM
     filigree (0.4.1)
     generator (0.0.1)
     lazy_priority_queue (0.1.1)
+    mini_portile2 (2.6.1)
     multipart-post (2.1.1)
+    nokogiri (1.12.5)
+      mini_portile2 (~> 2.6.1)
+      racc (~> 1.4)
+    racc (1.6.0)
     rgl (0.5.7)
       lazy_priority_queue (~> 0.1.0)
       stream (~> 0.5.3)
@@ -40,6 +45,7 @@ DEPENDENCIES
   colorize
   dotenv
   faraday
+  nokogiri
   rgl
   rltk
   z3!

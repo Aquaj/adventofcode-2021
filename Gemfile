@@ -19,4 +19,6 @@ end
 group '2021' do
   # Z3 4.8 prevents us from using Optimize
   gem 'z3', github: 'taw/z3', ref: '74302129029aadcd7c493a3577a3af3427334667'
+
+  gem 'nokogiri'
 end
