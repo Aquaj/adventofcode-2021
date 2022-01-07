@@ -34,7 +34,7 @@ Performance logging was added simply as a fun way to compare implementations wit
 <!-- On-hand emojis: ✔ 🌟 -->
 |       | Day                                                                     | Part One | Part Two | Solutions
 | :---: | -----                                                                   | :------: | :------: | :---:
-|   ✔   | [Day 0: Sonar Sweep](https://adventofcode.com/2021/day/1)               |    🌟    |    🌟    | [Solution](day-01.rb)
+|   ✔   | [Day 1: Sonar Sweep](https://adventofcode.com/2021/day/1)               |    🌟    |    🌟    | [Solution](day-01.rb)
 |   ✔   | [Day 2: Dive!](https://adventofcode.com/2021/day/2)                     |    🌟    |    🌟    | [Solution](day-02.rb)
 |   ✔   | [Day 3: Binary Diagnostic](https://adventofcode.com/2021/day/3)         |    🌟    |    🌟    | [Solution](day-03.rb)
 |   ✔   | [Day 4: Giant Squid](https://adventofcode.com/2021/day/4)               |    🌟    |    🌟    | [Solution](day-04.rb)
