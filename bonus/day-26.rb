@@ -138,7 +138,7 @@ module Bonus
 
     def convert_data(data)
       super.map do |message|
-        sender, body = message.split(': ')
+        sender, body = message.match(/^(\d+): (.*)$/).captures
         { sender: sender.to_i, body: body }
       end
     end
