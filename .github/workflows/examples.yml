@@ -10,6 +10,10 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
+      - name: Install Z3 (required for Day 24)
+        uses: pavpanchekha/setup-z3
+        with:
+          version: 4.8.13
       - name: Run examples
         run: |
           for file in $(ls day*.rb)
