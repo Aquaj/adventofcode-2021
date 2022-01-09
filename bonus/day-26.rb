@@ -23,8 +23,12 @@ module Bonus
         @user_id = user_id
       end
 
+      def cache_file_name
+        "tmp/26.#{@user_id}-keys.json"
+      end
+
       def download_info
-        return cache = JSON(File.read("tmp/26.#{@user_id}-keys.json")) if File.exist? 'tmp/26.keys.json'
+        return cache = JSON(File.read(cache_file_name)).transform_keys(&:to_sym) if File.exist?(cache_file_name)
         res = fetch(LEWAGON_AOC_BASE_URL + USER_PATH_SCHEME % { id: @user_id }, session_key: "_lewagon_aoc_session")
 
         name = Nokogiri::HTML(res.body).css('main h2').first.text
@@ -44,7 +48,7 @@ module Bonus
           ]
         end
         user_info = { name: name, keys: keys }
-        File.write("tmp/26.#{@user_id}-keys.json", user_info.to_json)
+        File.write(cache_file_name, user_info.to_json)
         user_info
       end
     end
@@ -78,12 +82,12 @@ module Bonus
         case shift
         when 0 then body.reverse
         when 1 then body.chars.rotate.join
-        when 2 then body.chars.rotate(-3**pos).join
+        when 2 then body.chars.rotate(-(3**pos)).join
         end
       end
     end
 
-    ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzàéè0123456789 .!?,;:'-#/\\()".chars.freeze
+    ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÇàéè0123456789 .!?,;:'-#/\\()".chars.freeze
     RUDOLPH = <<~TEXT.freeze
       You know Dasher, and Dancer, and
       Prancer, and Vixen,
