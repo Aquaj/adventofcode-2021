@@ -14,6 +14,7 @@ jobs:
         uses: pavpanchekha/setup-z3@1.2.2
         with:
           version: 4.8.13
+          distribution: glibc-2.31
       - name: Run examples
         timeout-minutes: 25
         run: |
